@@ -1,5 +1,5 @@
 import { API } from "./";
-import { IPhotos, IPhoto } from "domain/Photo";
+import { IPhotos } from "domain/Photo";
 
 export const getAlbumsPhotos = async (id: number): Promise<IPhotos> => {
   try {
