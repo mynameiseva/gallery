@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["es7", "dom"],
+    "allowJs": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "/*": ["/*"],
+      "components/*": ["components/*"],
+      "controllers/*": ["controllers/*"],
+      "domain/*": ["domain/*"],
+      "transport/*": ["transport/*"]
+    }
+  },
+  "include": ["./src/**/*"]
+}

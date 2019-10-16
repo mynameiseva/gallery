@@ -1,0 +1,37 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "ordered-imports": false,
+    "max-line-length": {
+      "options": [100]
+    },
+    "member-access": [true, "no-public"],
+    "interface-name": [true, "always-prefix"],
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": false,
+    "object-literal-sort-keys": false,
+    "new-parens": true,
+    "no-arg": true,
+    "no-empty": false,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "no-shadowed-variable": false,
+    "jsx-no-multiline-js": false,
+    "arrow-parens": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "jsx-alignment": false,
+    "experimentalDecorators": true
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [100]
+    }
+  }
+}
