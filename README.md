@@ -1,4 +1,4 @@
-##how to run
+how to run
 1. `yarn` | `npm i`
 2. `yarn start` | `npm start`
 
