@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { inject, observer } from "mobx-react";
-import { List, ListItem, ListItemText } from "@material-ui/core";
+import { List, ListItem, ListItemText, TextField } from "@material-ui/core";
 
 import { AlbumsController } from "controllers/AlbumsContoller";
 
@@ -28,15 +28,17 @@ export class AlbumsList extends React.Component<Props> {
       loading,
       error,
       searchableValue,
-      searchedAlbums
+      searchedAlbums,
     } = this.props.albumsController;
     return (
       <Container>
         <Title variant="h5">Albums</Title>
-        <input
-          type="text"
+        <TextField
+          label="Search Albums"
+          placeholder="Search albums"
           value={searchableValue}
           onChange={this.handleChange}
+          margin="normal"
         />
         {loading && <Spinner />}
         {(searchedAlbums.length === 0 || albums.length === 0) && !loading && (

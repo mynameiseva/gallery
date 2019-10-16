@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { RouteComponentProps } from "react-router-dom";
 import { inject, observer } from "mobx-react";
-import { CardHeader } from "@material-ui/core";
+import { CardHeader, TextField } from "@material-ui/core";
 
 import { Container, Spinner, Title, ZeroScreen } from "components/Common/";
 import { PhotosController } from "controllers/PhotosController";
@@ -31,20 +31,21 @@ export class AlbumsPhotosList extends React.Component<Props> {
       loading,
       error,
       searchableValue,
-      searchedPhotos
+      searchedPhotos,
     } = this.props.photosController;
     return (
       <Container>
         <Title variant="h5">Photos</Title>
-        <input
-          type="text"
+        <TextField
+          label="Search Photos"
+          placeholder="Search photos"
           value={searchableValue}
           onChange={this.handleChange}
+          margin="normal"
         />
         {loading && <Spinner />}
-        {(albumsPhotos.length === 0 || searchedPhotos.length === 0) && !loading && (
-          <ZeroScreen>Sorry, we have no such photos :(</ZeroScreen>
-        )}
+        {(albumsPhotos.length === 0 || searchedPhotos.length === 0) &&
+          !loading && <ZeroScreen>Sorry, we have no such photos :(</ZeroScreen>}
         {albumsPhotos.length > 0 && !loading && (
           <>
             {searchedPhotos.map(photo => (
