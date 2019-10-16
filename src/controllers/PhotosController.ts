@@ -10,13 +10,13 @@ export class PhotosController {
   @observable albumsPhotos: IPhotos = [];
   @observable loading: boolean = true;
   @observable error: string = "";
-  @observable searchableValue = "";
+  @observable searchableValue: string = "";
 
   constructor(rootController: RootController) {
     this.rootContoller = rootController;
   }
 
-  @action.bound async fetchAlbumsPhotos(id: number): Promise<void> {
+  @action async fetchAlbumsPhotos(id: number): Promise<void> {
     try {
       const albumsPhotos = await getAlbumsPhotos(id);
       this.albumsPhotos = albumsPhotos;
